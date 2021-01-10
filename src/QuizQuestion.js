@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import QuizQuestionButton from './QuizQuestionButton';
 
 class QuizQuestion extends Component {
+	handleClick() {
+		buttonText: '';
+	}
+
 	render() {
 		return (
 			<main>
@@ -11,6 +15,7 @@ class QuizQuestion extends Component {
 				<section className='buttons'>
 					<ul>
 						<QuizQuestionButton
+							clickHandler={this.handleClick.bind(this)}
 							button_text={this.props.quiz_question.answer_options[0]}
 						/>
 					</ul>
