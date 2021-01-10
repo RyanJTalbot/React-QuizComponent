@@ -10,9 +10,9 @@ class QuizQuestion extends Component {
 				</section>
 				<section className='buttons'>
 					<ul>
-						<QuizQuestionButton>
-							{this.props.quiz_question.answer_options[0]}
-						</QuizQuestionButton>
+						<QuizQuestionButton
+							button_text={this.props.quiz_question.answer_options[0]}
+						/>
 					</ul>
 				</section>
 			</main>
