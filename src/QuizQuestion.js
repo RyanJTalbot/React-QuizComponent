@@ -10,14 +10,11 @@ class QuizQuestion extends Component {
 		};
 	}
 	handleClick(buttonText) {
-		if ((this.setState() = incorrectAnswer)) {
-			return false;
-		} else {
-			return true;
-		}
-
 		if (buttonText === this.props.quiz_question.answer) {
+			this.setState({ incorrectAnswer: false });
 			this.props.showNextQuestionHandler();
+		} else {
+			this.setState({ incorrectAnswer: true });
 		}
 	}
 	render() {
